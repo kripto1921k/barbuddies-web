@@ -20,7 +20,7 @@ header {
 
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Mantiene el logo a la izquierda y el menú a la derecha */
     align-items: center;
     max-width: 1200px;
     margin: auto;
@@ -28,6 +28,10 @@ header {
 
 .logo h1 {
     font-size: 24px;
+}
+
+nav {
+    margin-left: auto; /* Asegura que el menú esté a la derecha */
 }
 
 nav ul {
