@@ -248,6 +248,25 @@ nav ul.menu li a:hover {
     background-color: #d69818;
 }
 
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-content img, .about-content .text-content {
+        margin: 10px;
+    }
+
+    .about-us h2 {
+        font-size: 2em; /* Ajustamos el tamaño del texto en pantallas pequeñas */
+    }
+
+    .about-content .text-content p {
+        font-size: 1em; /* Ajustamos el tamaño del texto en pantallas pequeñas */
+    }
+}
+
 .button {
     background-color: #f4b41a;
     color: #fff;
