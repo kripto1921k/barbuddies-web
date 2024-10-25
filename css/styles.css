@@ -1,73 +1,68 @@
 /* styles.css */
 
-/* Reset básico */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
 }
 
-/* Header */
 header {
-    background-color: #fff; /* Color de fondo blanco */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para separación */
-    position: sticky; /* Menú fijo al hacer scroll */
-    top: 0; /* Pegado a la parte superior */
-    z-index: 1000; /* Asegúrate de que esté encima de otros elementos */
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
 }
 
-/* Contenedor */
 .container {
-    max-width: 1200px; /* Ancho máximo */
-    margin: 0 auto; /* Centrar */
-    padding: 15px; /* Espaciado */
-    display: flex; /* Usar flexbox para alinear elementos */
-    justify-content: flex-start; /* Alinear a la izquierda */
-    align-items: center; /* Centrar verticalmente */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
 }
 
-/* Logo */
-.logo a {
-    font-size: 24px; /* Tamaño de fuente del logotipo */
-    color: #333; /* Color del texto */
-    text-decoration: none; /* Sin subrayado */
-    margin-right: auto; /* Asegura que el menú esté a la izquierda */
+.logo h1 {
+    font-size: 24px;
 }
 
-/* Estilo del menú */
-.menu {
-    list-style: none; /* Sin viñetas */
-    display: flex; /* Horizontal */
+nav ul {
+    list-style: none;
+    display: flex;
 }
 
-.menu li {
-    margin-left: 20px; /* Espaciado entre los elementos del menú */
+nav ul li {
+    margin: 0 15px;
 }
 
-.menu a {
-    text-decoration: none; /* Sin subrayado */
-    color: #333; /* Color del texto */
-    padding: 10px; /* Espaciado interno */
-    transition: color 0.3s; /* Transición suave para el color */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-.menu a:hover {
-    color: #007BFF; /* Color al pasar el ratón */
+nav ul li a:hover {
+    color: #ff9800; /* Un color de acento al pasar el mouse */
 }
 
 /* Responsividad */
 @media (max-width: 768px) {
-    .menu {
-        display: block; /* Cambiar a vertical en pantallas pequeñas */
-        margin-top: 10px; /* Espacio superior en pantallas pequeñas */
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
     }
-    .menu li {
-        margin-left: 0; /* Eliminar el margen izquierdo */
-        margin-bottom: 10px; /* Espaciado entre elementos */
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 10px 0;
     }
 }
