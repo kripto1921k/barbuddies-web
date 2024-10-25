@@ -279,6 +279,32 @@ nav ul.menu li a:hover {
     background-color: #e09d17;
 }
 
+.recetas,
+.cursos,
+.store {
+    padding: 40px 0; /* Ajusta el padding si es necesario */
+    margin: 40px 0; /* Asegúrate de que hay un margen suficiente */
+}
+
+.swiper-container {
+    height: 300px; /* Asegúrate de que todas las secciones tengan la misma altura */
+}
+
+/* Agrega un margen inferior a cada slide para separarlos visualmente */
+.swiper-slide {
+    margin-bottom: 20px; /* Espaciado entre slides */
+}
+
+/* También puedes asegurarte de que los contenedores de las secciones no tengan un fondo transparente */
+.recetas, .cursos, .store {
+    background-color: #fff; /* O cualquier otro color que desees */
+}
+
+/* Opcional: Establecer un min-height si es necesario */
+.recetas, .cursos, .store {
+    min-height: 400px; /* Cambia este valor según tus necesidades */
+}
+
 footer {
     background-color: #333;
     color: #fff;
