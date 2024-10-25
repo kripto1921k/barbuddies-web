@@ -1,40 +1,72 @@
-body {
-    font-family: Arial, sans-serif;
+/* styles.css */
+
+/* Reset básico */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
+    background-color: #fff; /* Color de fondo blanco */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para separación */
+    position: sticky; /* Menú fijo al hacer scroll */
+    top: 0; /* Pegado a la parte superior */
+    z-index: 1000; /* Asegúrate de que esté encima de otros elementos */
 }
 
+/* Contenedor */
+.container {
+    max-width: 1200px; /* Ancho máximo */
+    margin: 0 auto; /* Centrar */
+    padding: 15px; /* Espaciado */
+    display: flex; /* Usar flexbox para alinear elementos */
+    justify-content: space-between; /* Espacio entre el logo y el menú */
+    align-items: center; /* Centrar verticalmente */
+}
+
+/* Logo */
+.logo a {
+    font-size: 24px; /* Tamaño de fuente del logotipo */
+    color: #333; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Estilo del menú */
 .menu {
-    list-style-type: none;
-    padding: 0;
+    list-style: none; /* Sin viñetas */
+    display: flex; /* Horizontal */
 }
 
 .menu li {
-    display: inline; /* Alinear horizontalmente */
-    margin-right: 20px; /* Espaciado entre elementos */
+    margin-left: 20px; /* Espaciado entre los elementos del menú */
 }
 
 .menu a {
-    color: #fff;
     text-decoration: none; /* Sin subrayado */
-    font-weight: bold;
+    color: #333; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    transition: color 0.3s; /* Transición suave para el color */
 }
 
 .menu a:hover {
-    text-decoration: underline; /* Subrayar al pasar el mouse */
+    color: #007BFF; /* Color al pasar el ratón */
 }
 
-/* Estilo responsivo */
-@media (max-width: 600px) {
-    .menu li {
+/* Responsividad */
+@media (max-width: 768px) {
+    .menu {
         display: block; /* Cambiar a vertical en pantallas pequeñas */
-        margin: 10px 0; /* Espaciado entre elementos */
+        margin-top: 10px; /* Espacio superior en pantallas pequeñas */
+    }
+    .menu li {
+        margin-left: 0; /* Eliminar el margen izquierdo */
+        margin-bottom: 10px; /* Espaciado entre elementos */
     }
 }
