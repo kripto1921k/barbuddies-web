@@ -1,316 +1,40 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
     background-color: #f4f4f4;
-    color: #333;
 }
 
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 10px 20px;
 }
 
-header .logo h1 {
-    margin-left: 20px;
-}
-
-nav ul.menu {
+.menu {
     list-style-type: none;
-    display: flex;
-    margin-right: 20px;
+    padding: 0;
 }
 
-nav ul.menu li {
-    margin: 0 15px;
+.menu li {
+    display: inline; /* Alinear horizontalmente */
+    margin-right: 20px; /* Espaciado entre elementos */
 }
 
-nav ul.menu li a {
+.menu a {
     color: #fff;
-    text-decoration: none;
+    text-decoration: none; /* Sin subrayado */
     font-weight: bold;
 }
 
-nav ul.menu li a:hover {
-    color: #f4b41a;
+.menu a:hover {
+    text-decoration: underline; /* Subrayar al pasar el mouse */
 }
 
-.hero {
-    background: url('../images/cocktail-background.jpg') no-repeat center center/cover;
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    text-align: center;
-}
-
-.hero h2 {
-    font-size: 3em;
-}
-
-.hero p {
-    font-size: 1.5em;
-}
-
-.recetas {
-    padding: 40px;
-    text-align: center;
-}
-
-.recetas h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-/* Estilos del slider */
-.swiper-container {
-    width: 100%;
-    height: 300px;
-    margin-bottom: 20px;
-}
-
-.swiper-slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.swiper-slide img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.swiper-slide h3 {
-    margin-top: 10px;
-    font-size: 1.5em;
-    color: #333;
-}
-
-/* Personalización de los botones del slider */
-.swiper-button-next, .swiper-button-prev {
-    color: #f4b41a;
-}
-
-/* Paginación */
-.swiper-pagination-bullet {
-    background-color: #f4b41a;
-}
-
-/* Estilos para Cursos */
-.cursos {
-    margin: 40px 0;
-}
-
-.cursos h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.swiper-cursos .swiper-slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.swiper-cursos img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.swiper-cursos h3 {
-    margin-top: 10px;
-    font-size: 1.5em;
-    color: #333;
-}
-
-/* Estilos para Store */
-.store {
-    margin: 40px 0;
-}
-
-.store h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.swiper-store .swiper-slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.swiper-store img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.swiper-store h3 {
-    margin-top: 10px;
-    font-size: 1.5em;
-    color: #333;
-}
-
-.swiper-store p {
-    font-size: 1.2em;
-    color: #333;
-    margin-top: 5px;
-}
-
-/* Personalización de los botones del slider */
-.swiper-cursos-next, .swiper-cursos-prev, .swiper-store-next, .swiper-store-prev {
-    color: #f4b41a;
-}
-
-/* Sección de Acerca de Nosotros */
-.about-us {
-    padding: 60px 0;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-.about-us h2 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: #333;
-}
-
-.about-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.about-content img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-    margin: 20px;
-}
-
-.about-content .text-content {
-    max-width: 600px;
-    text-align: left;
-    margin: 20px;
-}
-
-.about-content .text-content p {
-    font-size: 1.2em;
-    line-height: 1.8;
-    color: #555;
-}
-
-.about-content .text-content .button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #f4b41a;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease;
-}
-
-.about-content .text-content .button:hover {
-    background-color: #d69818;
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
+/* Estilo responsivo */
+@media (max-width: 600px) {
+    .menu li {
+        display: block; /* Cambiar a vertical en pantallas pequeñas */
+        margin: 10px 0; /* Espaciado entre elementos */
     }
-
-    .about-content img, .about-content .text-content {
-        margin: 10px;
-    }
-
-    .about-us h2 {
-        font-size: 2em; /* Ajustamos el tamaño del texto en pantallas pequeñas */
-    }
-
-    .about-content .text-content p {
-        font-size: 1em; /* Ajustamos el tamaño del texto en pantallas pequeñas */
-    }
-}
-
-.button {
-    background-color: #f4b41a;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.button:hover {
-    background-color: #e09d17;
-}
-
-.recetas,
-.cursos,
-.store {
-    padding: 40px 0; /* Ajusta el padding si es necesario */
-    margin: 40px 0; /* Asegúrate de que hay un margen suficiente */
-}
-
-.swiper-container {
-    height: 300px; /* Asegúrate de que todas las secciones tengan la misma altura */
-}
-
-/* Agrega un margen inferior a cada slide para separarlos visualmente */
-.swiper-slide {
-    margin-bottom: 20px; /* Espaciado entre slides */
-}
-
-/* También puedes asegurarte de que los contenedores de las secciones no tengan un fondo transparente */
-.recetas, .cursos, .store {
-    background-color: #fff; /* O cualquier otro color que desees */
-}
-
-/* Opcional: Establecer un min-height si es necesario */
-.recetas, .cursos, .store {
-    min-height: 400px; /* Cambia este valor según tus necesidades */
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
