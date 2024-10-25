@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/styles.css">
     <!-- Enlaces de Swiper.js -->
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
     <header>
@@ -61,6 +60,26 @@
         
         <a href="#" class="button">Ver todas las recetas</a>
     </section>
+    
+    <!-- Script para Swiper.js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 3000,
+        },
+    });
+</script>
 
     <footer>
         <p>© 2024 Barbuddies. Todos los derechos reservados.</p>
