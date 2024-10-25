@@ -27,7 +27,7 @@ header {
     margin: 0 auto; /* Centrar */
     padding: 15px; /* Espaciado */
     display: flex; /* Usar flexbox para alinear elementos */
-    justify-content: space-between; /* Espacio entre el logo y el menú */
+    justify-content: flex-start; /* Alinear a la izquierda */
     align-items: center; /* Centrar verticalmente */
 }
 
@@ -36,6 +36,7 @@ header {
     font-size: 24px; /* Tamaño de fuente del logotipo */
     color: #333; /* Color del texto */
     text-decoration: none; /* Sin subrayado */
+    margin-right: auto; /* Asegura que el menú esté a la izquierda */
 }
 
 /* Estilo del menú */
