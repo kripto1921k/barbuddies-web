@@ -33,10 +33,32 @@
 
     <section class="recetas">
         <h2>Recetas populares</h2>
-        <!-- Aquí agregaremos el slider -->
-        <div class="slider">
-            <!-- Este será el espacio para las imágenes de cócteles -->
+
+        <!-- Slider principal -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Cada slide es una receta -->
+            <div class="swiper-slide">
+                <img src="images/receta1.jpg" alt="Receta 1">
+                <h3>Mojito</h3>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/receta2.jpg" alt="Receta 2">
+                <h3>Margarita</h3>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/receta3.jpg" alt="Receta 3">
+                <h3>Cosmopolitan</h3>
+            </div>
+            <!-- Agrega más slides aquí -->
         </div>
+        <!-- Botones de navegación -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Paginación -->
+        <div class="swiper-pagination"></div>
+    </div>
+        
         <a href="#" class="button">Ver todas las recetas</a>
     </section>
 
