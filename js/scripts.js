@@ -26,3 +26,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+// JavaScript para manejar el despliegue del menú móvil
+const mobileMenu = document.querySelector('.mobile-menu');
+const openMenuBtn = document.querySelector('#open-menu');
+const closeMenuBtn = document.querySelector('.close-btn');
+
+openMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.add('show-menu');
+});
+
+closeMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('show-menu');
+});
