@@ -41,6 +41,16 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
+    transition: max-height 0.3s ease-in-out; /* Agrega una transición para que el despliegue sea suave */
+    overflow: hidden;
+    max-height: 0; /* Se oculta inicialmente en móviles */
+}
+
+nav ul.active {
+    max-height: 200px; /* Altura suficiente para mostrar los enlaces al activarse */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 nav ul li {
