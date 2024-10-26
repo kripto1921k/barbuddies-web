@@ -3,48 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbuddies</title>
+    <title>Recetas Deliciosas</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-    <!-- Header con el Menú -->
-    <header class="header">
-        <div class="logo">
-            <a href="#inicio">Barbuddies</a>
-        </div>
-
-        <!-- Menú de Escritorio -->
-        <nav class="desktop-menu">
+    <header>
+        <h1>Recetas Deliciosas</h1>
+        <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#recetas">Recetas</a></li>
-                <li><a href="#cursos">Cursos</a></li>
-                <li><a href="#store">Store</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
-
-        <!-- Ícono de Hamburguesa para Móvil -->
-        <div id="open-menu" class="hamburger-icon">
-            ☰
-        </div>
     </header>
 
-    <!-- Menú Desplegable Móvil -->
-    <div id="mobile-menu" class="mobile-menu">
-        <span class="close-btn">&times;</span>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#recetas">Recetas</a></li>
-            <li><a href="#cursos">Cursos</a></li>
-            <li><a href="#store">Store</a></li>
-        </ul>
-    </div>
-
-    <!-- Contenido Principal -->
     <main>
-        
+        <section id="inicio" class="intro">
+            <h2>Bienvenido a Recetas Deliciosas</h2>
+            <p>Descubre una variedad de recetas fáciles y deliciosas que puedes preparar en casa.</p>
+        </section>
+
+        <section id="recetas">
+            <h2>Recetas Populares</h2>
+            <div class="receta">
+                <h3>Espaguetis a la Carbonara</h3>
+                <img src="https://via.placeholder.com/200" alt="Espaguetis a la Carbonara">
+                <p>Una receta clásica italiana que es rápida y deliciosa.</p>
+                <a href="#detalles" class="boton">Ver Receta</a>
+            </div>
+
+            <div class="receta">
+                <h3>Ensalada César</h3>
+                <img src="https://via.placeholder.com/200" alt="Ensalada César">
+                <p>Una ensalada fresca y sabrosa perfecta para el verano.</p>
+                <a href="#detalles" class="boton">Ver Receta</a>
+            </div>
+
+            <div class="receta">
+                <h3>Tarta de Chocolate</h3>
+                <img src="https://via.placeholder.com/200" alt="Tarta de Chocolate">
+                <p>Un postre irresistible para los amantes del chocolate.</p>
+                <a href="#detalles" class="boton">Ver Receta</a>
+            </div>
+        </section>
+
+        <section id="detalles" class="detalles">
+            <h2>Detalles de la Receta</h2>
+            <p>Selecciona una receta para ver los ingredientes y el procedimiento.</p>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Si tienes preguntas o sugerencias, ¡no dudes en contactarnos!</p>
+            <form>
+                <input type="text" placeholder="Tu nombre" required>
+                <input type="email" placeholder="Tu email" required>
+                <textarea placeholder="Tu mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2024 Recetas Deliciosas. Todos los derechos reservados.</p>
+    </footer>
 
     <script src="js/scripts.js"></script>
 </body>
