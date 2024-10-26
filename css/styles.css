@@ -51,21 +51,39 @@ nav ul.active {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.85); /* Fondo semi-transparente */
+    padding: 10px;
+    border-radius: 8px;
+    transition: max-height 0.4s ease, background-color 0.3s ease-in-out;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
 }
 
 nav ul li a {
-    color: white;
+    color: #ffffff;
+    font-size: 1.2em;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    padding: 10px 20px;
+    display: inline-block;
+    width: 100%;
+    background-color: #333; /* Fondo para los enlaces */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ff9800; /* Un color de acento al pasar el mouse */
+    background-color: #555; /* Color de fondo en hover */
+}
+
+/* Ajuste del icono del menú en móviles */
+#mobile-menu {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #ffffff;
 }
 
 /* Estilo del menú de hamburguesa */
