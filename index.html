@@ -3,43 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
     <title>Barbuddies</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Barbuddies</h1>
-            </div>
-            <nav class="desktop-menu">
-    <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#recetas">Recetas</a></li>
-        <li><a href="#cursos">Cursos</a></li>
-        <li><a href="#store">Store</a></li>
-    </ul>
-</nav>
-            <div class="menu-toggle" id="mobile-menu"> 
-                    <span class="bar"></span> 
-                    <span class="bar"></span> 
-                    <span class="bar"></span> 
-                </div>
-                 <!-- Menú móvil -->
-<div id="mobile-menu" class="mobile-menu">
-    <span class="close-btn">&times;</span>
-    <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#recetas">Recetas</a></li>
-        <li><a href="#cursos">Cursos</a></li>
-        <li><a href="#store">Store</a></li>
-    </ul>
-</div>
+
+    <!-- Header con el Menú -->
+    <header class="header">
+        <div class="logo">
+            <a href="#inicio">Barbuddies</a>
+        </div>
+
+        <!-- Menú de Escritorio -->
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#recetas">Recetas</a></li>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#store">Store</a></li>
+            </ul>
+        </nav>
+
+        <!-- Ícono de Hamburguesa para Móvil -->
+        <div id="open-menu" class="hamburger-icon">
+            ☰
         </div>
     </header>
+
+    <!-- Menú Desplegable Móvil -->
+    <div id="mobile-menu" class="mobile-menu">
+        <span class="close-btn">&times;</span>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#recetas">Recetas</a></li>
+            <li><a href="#cursos">Cursos</a></li>
+            <li><a href="#store">Store</a></li>
+        </ul>
+    </div>
+
+    <!-- Contenido Principal -->
     <main>
-        <!-- Aquí irá el contenido principal -->
+        <section id="inicio">
+            <h1>Bienvenidos a Nuestra Página</h1>
+            <p>Contenido de ejemplo...</p>
+        </section>
     </main>
-    <script src="js/scripts.js"></script> <!-- Enlace a script.js -->
+
+    <script src="js/scripts.js"></script>
 </body>
 </html>
