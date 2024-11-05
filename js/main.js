@@ -3,8 +3,14 @@ const header = document.getElementById('header');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
         header.classList.add('scrolled');
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.add('scrolled');
+        });
     } else {
         header.classList.remove('scrolled');
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.remove('scrolled');
+        });
     }
 });
 
@@ -38,3 +44,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+// Search bar toggle
+const searchIcon = document.querySelector('.search-icon');
+const searchBar = document.querySelector('#search-bar');
+
+searchIcon.addEventListener('click', () => {
+    searchBar.classList.toggle('show');
+});
+
