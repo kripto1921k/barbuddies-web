@@ -168,6 +168,10 @@ body {
     margin-bottom: 0.5rem;
 }
 
+.menu-toggle {
+  display: none; /* Oculta el botón de menú toggle por defecto */
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .menu-toggle {
