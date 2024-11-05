@@ -57,6 +57,11 @@ body {
   color: var(--secondary-color);
 }
 
+.header.scrolled .nav-menu a {
+  color: #000000; /* Cambia el color del contenido del menú a negro cuando se hace scroll */
+}
+
+
 .nav-menu {
   display: flex;
   list-style: none;
@@ -69,12 +74,80 @@ body {
   font-weight: 500;
 }
 
-.header.scrolled .nav-menu a {
-  color: var(--secondary-color);
+.nav li:last-child {
+  position: relative;
 }
 
-.nav-menu a:hover {
-  color: var(--primary-color);
+.nav li:last-child input[type="search"] {
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  width: 200px;
+  height: 40px;
+  font-size: 16px;
+}
+
+.nav li:last-child button[type="button"] {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #C7A17A;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.nav li:last-child button[type="button"]:hover {
+  background-color: #231F20;
+}
+
+/* Oculta la barra de búsqueda por defecto */
+#search-bar {
+  display: none;
+}
+
+/* Muestra la barra de búsqueda cuando se hace clic en la lupa */
+#search-bar.show {
+  display: block;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #FFFFFF;
+  padding: 10px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#search-bar.show input[type="search"] {
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  width: 200px;
+  height: 40px;
+  font-size: 16px;
+}
+
+#search-bar.show button[type="button"] {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #C7A17A;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.nav-link {
+  color: #FFFFFF; /* Color blanco para el icono de la lupa cuando la barra de navegación es transparente */
+}
+
+.header.scrolled .nav-link {
+  color: #000000; /* Color negro para el icono de la lupa cuando la barra de navegación es sólida */
 }
 
 /* Hero Section */
@@ -101,6 +174,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 4rem;
   margin-bottom: 1rem;
+  color: #FFFFFF;
 }
 
 .hero-content p {
@@ -170,6 +244,26 @@ body {
 
 .menu-toggle {
   display: none; /* Oculta el botón de menú toggle por defecto */
+}
+
+@media (max-width: 768px) {
+  .nav-menu.active .nav-link {
+      color: var(--secondary-color); /* Cambia a negro para ser visible sobre fondo blanco */
+  }
+
+  /* Asegúrate de que el ícono de la lupa tenga el color correcto por defecto */
+  .search-icon {
+      color: var(--white);
+      transition: color 0.3s ease;
+  }
+
+  .header.scrolled .search-icon {
+      color: var(--secondary-color);
+  }
+
+  .nav-menu.active .search-icon {
+      color: var(--secondary-color); /* Color negro cuando el menú está abierto */
+  }
 }
 
 /* Responsive */
