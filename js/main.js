@@ -53,3 +53,46 @@ searchIcon.addEventListener('click', () => {
     searchBar.classList.toggle('show');
 });
 
+// Seccion de las Recetas
+document.addEventListener('DOMContentLoaded', function() {
+  const recipes = [
+      {
+          title: "Receta 1",
+          image: "assets/images/cocktail1.jpg",
+          description: "Lorem ipsum dolor sit amet, consectetur adipisicing"
+      },
+      {
+          title: "Receta 2",
+          image: "assets/images/cocktail2.jpg",
+          description: "Lorem ipsum dolor sit amet, consectetur adipisicing"
+      },
+      {
+          title: "Receta 3",
+          image: "assets/images/cocktail3.jpg",
+          description: "Lorem ipsum dolor sit amet, consectetur adipisicing"
+      },
+      {
+          title: "Receta 4",
+          image: "assets/images/cocktail4.jpg",
+          description: "Lorem ipsum dolor sit amet, consectetur adipisicing"
+      }
+  ];
+
+  function createRecipeElement(recipe) {
+      return `
+          <div class="recipe-item">
+              <img src="${recipe.image}" alt="${recipe.title}" class="recipe-image">
+              <h3 class="recipe-title">${recipe.title}</h3>
+              <p class="recipe-description">${recipe.description}</p>
+          </div>
+      `;
+  }
+
+  // Llenar el grid para pantallas grandes
+  const largeScreenGrid = document.getElementById('largeScreenGrid');
+  largeScreenGrid.innerHTML = recipes.map(recipe => createRecipeElement(recipe)).join('');
+
+  // Llenar la lista para pantallas pequeñas
+  const smallScreenList = document.getElementById('smallScreenList');
+  smallScreenList.innerHTML = recipes.map(recipe => createRecipeElement(recipe)).join('');
+});
