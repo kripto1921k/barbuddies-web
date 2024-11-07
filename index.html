@@ -28,7 +28,7 @@
                 <li>
                     <i class="fas fa-search search-icon nav-link"></i>
                     <div id="search-bar" class="hidden">
-                      <input type="search" id="search-input" placeholder="Buscar">
+                      <input type="search" id="search-input" placeholder="Buscar...">
                       <button id="search-button">Buscar</button>
                     </div>
                   </li>
@@ -70,16 +70,33 @@
             </div>
         </section>
 
-        <!-- Recetas Destacadas -->
-        <section class="featured-recipes" id="recetas">
-            <div class="section-header">
-                <h2>Recetas Destacadas</h2>
-                <p>Nuestras creaciones más populares</p>
+        <!-- Sección de recetas -->
+        <div class="container">
+            <h1 class="title">Recetas</h1>
+            
+            <!-- Grid para pantallas grandes -->
+            <div class="recipe-grid" id="largeScreenGrid">
+                <!-- Las recetas se insertarán aquí mediante JavaScript -->
             </div>
-            <div class="recipe-grid">
-                <!-- Las tarjetas de recetas irán aquí -->
+    
+            <!-- Lista para pantallas pequeñas -->
+            <div class="recipe-list" id="smallScreenList">
+                <!-- Las recetas se insertarán aquí mediante JavaScript -->
             </div>
-        </section>
+    
+            <!-- Botón View Full Menu -->
+            <div class="menu-button">
+                <a href="#" class="view-more">View Full Menu</a>
+                <div class="arrow-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+  
+  
     </main>
 
     <footer class="footer">
