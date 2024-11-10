@@ -96,3 +96,20 @@ document.addEventListener('DOMContentLoaded', function() {
   const smallScreenList = document.getElementById('smallScreenList');
   smallScreenList.innerHTML = recipes.map(recipe => createRecipeElement(recipe)).join('');
 });
+
+document.querySelector('.menu-button .view-more').addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    
+    if (targetElement) {
+        const headerOffset = 80;
+        const elementPosition = targetElement.offsetTop;
+        const offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
+});
