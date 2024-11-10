@@ -113,3 +113,17 @@ document.querySelector('.menu-button .view-more').addEventListener('click', func
         });
     }
 });
+
+// Animación suave para los botones de curso
+document.querySelectorAll('.course-button').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        const offsetTop = document.querySelector(href).offsetTop;
+        
+        scroll({
+            top: offsetTop - 80,
+            behavior: 'smooth'
+        });
+    });
+});
