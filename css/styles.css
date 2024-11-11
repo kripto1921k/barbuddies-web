@@ -313,7 +313,6 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 1rem;
   margin-top: 2rem;
   transition: transform 0.3s ease;
 }
@@ -323,10 +322,6 @@ body {
   text-decoration: none;
   font-size: 0.875rem;
   transition: all 0.3s ease;
-}
-
-.view-more:hover {
-  text-decoration: underline;
 }
 
 .menu-button:hover {
@@ -587,7 +582,9 @@ body {
 .courses-footer {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   margin-top: 2rem;
+  transition: transform 0.3s ease;
 }
 
 .view-all {
@@ -600,22 +597,31 @@ body {
 }
 
 .arrow-circle {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   border: 1px solid var(--primary-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--primary-color);
   margin-left: 1rem;
   transition: all 0.3s ease;
+}
+
+.courses-footer:hover {
+  transform: translateX(5px);
 }
 
 .view-all:hover {
   color: var(--secondary-color);
 }
 
-.view-all:hover .arrow-circle {
+.courses-footer:hover .view-more {
+  color: var(--secondary-color);
+}
+
+.courses-footer:hover .arrow-circle {
   background-color: var(--primary-color);
   color: var(--white);
   transform: scale(1.1);
