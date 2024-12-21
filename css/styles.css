@@ -617,7 +617,7 @@ body {
   color: var(--secondary-color);
 }
 
-.courses-footer:hover .view-more {
+.courses-footer:hover .view-all {
   color: var(--secondary-color);
 }
 
@@ -637,6 +637,126 @@ body {
   }
 
   .courses-footer {
+      justify-content: center;
+  }
+}
+
+/* seccion de productos */
+.product-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-color);
+}
+
+.product-image {
+  background: var(--primary-color);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.product-image img {
+  max-width: 80%;
+  height: auto;
+  transform: translateX(20%);
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+}
+
+.decoration-element {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  right: -75px;
+  top: -75px;
+  opacity: 0.8;
+}
+
+.product-content {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  color: var(--text-color);
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+.product-content p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 3rem;
+  max-width: 80%;
+}
+
+.order-now {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.order-now span {
+  font-size: 1.1rem;
+}
+
+.circle-arrow {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.circle-arrow svg {
+  color: white;
+  width: 24px;
+  height: 24px;
+}
+
+.order-now:hover .circle-arrow {
+  transform: translateX(10px);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .product-section {
+      grid-template-columns: 1fr;
+  }
+
+  .product-image img {
+      transform: translateX(0);
+      max-width: 100%;
+  }
+
+  .product-content {
+      padding: 2rem;
+      text-align: center;
+  }
+
+  .product-content h1 {
+      font-size: 3rem;
+  }
+
+  .product-content p {
+      max-width: 100%;
+  }
+
+  .order-now {
       justify-content: center;
   }
 }
