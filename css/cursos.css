@@ -1,0 +1,409 @@
+/* Variables de colores similares a la plantilla */
+:root {
+    --primary-color: #C7A17A;
+    --secondary-color: #231F20;
+    --text-color: #666666;
+    --light-bg: #F9F9F9;
+    --white: #FFFFFF;
+    --header-height: 80px;
+  }
+  
+  /* Reset y estilos generales */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+  }
+
+  /* Header */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    height: var(--header-height);
+  }
+  
+  .header.scrolled {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .logo h1 {
+    font-family: 'Playfair Display', serif;
+    color: var(--white);
+    font-size: 2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .header.scrolled .logo h1 {
+    color: var(--secondary-color);
+  }
+  
+  .header.scrolled .nav-menu a {
+    color: #000000; /* Cambia el color del contenido del menú a negro cuando se hace scroll */
+  }
+  
+  
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+  
+  .nav-menu a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .nav li:last-child {
+    position: relative;
+  }
+  
+  .nav li:last-child input[type="search"] {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  .nav li:last-child button[type="button"] {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #C7A17A;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+  
+  .nav li:last-child button[type="button"]:hover {
+    background-color: #231F20;
+  }
+  
+  /* Oculta la barra de búsqueda por defecto */
+  #search-bar {
+    display: none;
+  }
+  
+  /* Muestra la barra de búsqueda cuando se hace clic en la lupa */
+  #search-bar.show {
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #FFFFFF;
+    padding: 10px;
+    border: 1px solid #CCCCCC;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  #search-bar.show input[type="search"] {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  #search-bar.show button[type="button"] {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #C7A17A;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+  
+  .nav-link {
+    color: #FFFFFF; /* Color blanco para el icono de la lupa cuando la barra de navegación es transparente */
+  }
+  
+  .header.scrolled .nav-link {
+    color: #000000; /* Color negro para el icono de la lupa cuando la barra de navegación es sólida */
+  }
+
+  .menu-toggle {
+    display: none; /* Oculta el botón de menú toggle por defecto */
+  }
+
+  @media (max-width: 768px) {
+    .nav-menu.active .nav-link {
+        color: var(--secondary-color); /* Cambia a negro para ser visible sobre fondo blanco */
+    }
+  
+    /* Asegúrate de que el ícono de la lupa tenga el color correcto por defecto */
+    .search-icon {
+        color: var(--white);
+        transition: color 0.3s ease;
+    }
+  
+    .header.scrolled .search-icon {
+        color: var(--secondary-color);
+    }
+  
+    .nav-menu.active .search-icon {
+        color: var(--secondary-color); /* Color negro cuando el menú está abierto */
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        color: var(--white);
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+  
+    .header.scrolled .menu-toggle {
+        color: var(--secondary-color);
+    }
+  
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        padding: 1rem 0;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+  
+    .nav-menu.active {
+        display: flex;
+    }
+  
+    .nav-menu a {
+        color: var(--secondary-color);
+    }
+  
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+  }
+
+/* Pie de Pagina */
+.footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 4rem 2rem 2rem;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+  }
+  
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .brand-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .brand-slogan {
+    color: #888;
+    margin: 0;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-link {
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: #333;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  
+  .social-link:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+  }
+  
+  .footer-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-nav li {
+    margin-bottom: 0.8rem;
+  }
+  
+  .footer-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-nav a:hover {
+    color: #888;
+  }
+  
+  .contact-link {
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-link:hover {
+    color: #888;
+  }
+  
+  /* Estilos para la sección legal */
+  .footer-legal {
+    max-width: 1200px;
+    margin: 3rem auto 0;
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+    text-align: center;
+  }
+  
+  .legal-links {
+    margin-bottom: 1rem;
+  }
+  
+  .legal-links a {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+  
+  .legal-links a:hover {
+    color: #ffffff;
+  }
+  
+  .separator {
+    color: #888;
+    margin: 0 1rem;
+  }
+  
+  .copyright {
+    color: #888;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+        padding: 3rem 1.5rem 1.5rem;
+    }
+    
+    .footer-content {
+        gap: 2rem;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .contact-link {
+        justify-content: center;
+    }
+  
+    .legal-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+  
+    .separator {
+        display: none;
+    }
+  }
+
+  /* Hero Section para los cursos */
+.courses-hero {
+  height: 50vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('ruta-a-tu-imagen-de-fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: var(--header-height);
+}
+
+.courses-hero-content {
+  color: var(--white);
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.courses-hero-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #FFFFFF;
+}
+
+.courses-hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
