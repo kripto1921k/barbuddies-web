@@ -375,3 +375,35 @@
         display: none;
     }
   }
+
+  /* Hero Section para Recetas */
+.recipe-hero {
+  height: 50vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('ruta-a-tu-imagen-de-fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: var(--header-height);
+}
+
+.recipe-hero-content {
+  color: var(--white);
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.recipe-hero-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #FFFFFF;
+}
+
+.recipe-hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
