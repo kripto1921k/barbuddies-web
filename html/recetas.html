@@ -46,6 +46,124 @@
     </div>
 </section>
 
+<!-- Section para Recetas -->
+<section class="cocktail-section">
+    <header class="section-header">
+      <h1>Encuentra tu Cóctel Ideal</h1>
+      <input type="text" id="search-input" placeholder="Busca por nombre o ingrediente..." />
+    </header>
+    
+    <div class="filters-container">
+      <button class="filter-toggle" id="filter-toggle">Filtros &#9776;</button>
+      <div class="filters" id="filters">
+        <div class="filter-group">
+          <label for="licor">Tipo de Licor:</label>
+          <select name="licor" id="licor">
+            <option value="">Todos</option>
+            <option value="vodka">Vodka</option>
+            <option value="ron">Ron</option>
+            <option value="tequila">Tequila</option>
+            <option value="gin">Gin</option>
+            <option value="whisky">Whisky</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="sabor">Sabor:</label>
+          <select name="sabor" id="sabor">
+            <option value="">Todos</option>
+            <option value="dulce">Dulce</option>
+            <option value="ácido">Ácido</option>
+            <option value="amargo">Amargo</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="dificultad">Dificultad:</label>
+          <select name="dificultad" id="dificultad">
+            <option value="">Todos</option>
+            <option value="fácil">Fácil</option>
+            <option value="intermedio">Intermedio</option>
+            <option value="avanzado">Avanzado</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="tiempo">Tiempo de Preparación:</label>
+          <select name="tiempo" id="tiempo">
+            <option value="">Todos</option>
+            <option value="menos-5">Menos de 5 minutos</option>
+            <option value="5-15">5-15 minutos</option>
+            <option value="mas-15">Más de 15 minutos</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="ocasion">Ocasión:</label>
+          <select name="ocasion" id="ocasion">
+            <option value="">Todas</option>
+            <option value="verano">Verano</option>
+            <option value="navidad">Navidad</option>
+            <option value="fiesta">Fiesta</option>
+            <option value="romantico">Romántico</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="color">Color:</label>
+          <select name="color" id="color">
+            <option value="">Todos</option>
+            <option value="rojo">Rojo</option>
+            <option value="verde">Verde</option>
+            <option value="azul">Azul</option>
+            <option value="amarillo">Amarillo</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    
+    <div class="cocktails" id="cocktails">
+      <!-- Tarjeta de cóctel 1 -->
+      <div class="cocktail-card" data-licor="ron" data-sabor="dulce" data-dificultad="fácil" data-tiempo="menos-5" data-ocasion="verano" data-color="verde">
+        <img src="../assets/images/cocktail3.jpg" alt="Mojito" />
+        <h3>Mojito</h3>
+        <p>Licor: Ron</p>
+        <p>Sabor: Dulce</p>
+        <p>Tiempo: 5 minutos</p>
+        <button>Ver receta</button>
+      </div>
+      
+      <!-- Tarjeta de cóctel 2 -->
+      <div class="cocktail-card" data-licor="tequila" data-sabor="ácido" data-dificultad="intermedio" data-tiempo="menos-5" data-ocasion="fiesta" data-color="amarillo">
+        <img src="../assets/images/cocktail1.jpg" alt="Margarita" />
+        <h3>Margarita</h3>
+        <p>Licor: Tequila</p>
+        <p>Sabor: Ácido</p>
+        <p>Tiempo: 5 minutos</p>
+        <button>Ver receta</button>
+      </div>
+
+      <!-- Tarjeta de cóctel 3 -->
+      <div class="cocktail-card" data-licor="vodka" data-sabor="amargo" data-dificultad="avanzado" data-tiempo="mas-15" data-ocasion="romantico" data-color="rojo">
+        <img src="../assets/images/cocktail2.jpg" alt="Caipiroska" />
+        <h3>Caipiroska</h3>
+        <p>Licor: Vodka</p>
+        <p>Sabor: Amargo</p>
+        <p>Tiempo: 20 minutos</p>
+        <button>Ver receta</button>
+      </div>
+
+      <!-- Tarjeta de cóctel 4 -->
+      <div class="cocktail-card" data-licor="vodka" data-sabor="amargo" data-dificultad="avanzado" data-tiempo="mas-15" data-ocasion="romantico" data-color="rojo">
+        <img src="../assets/images/cocktail2.jpg" alt="Caipiroska" />
+        <h3>Caipiroska</h3>
+        <p>Licor: Vodka</p>
+        <p>Sabor: Amargo</p>
+        <p>Tiempo: 20 minutos</p>
+        <button>Ver receta</button>
+      </div>
+      
+      <!-- Añade más tarjetas de cócteles aquí -->
+      
+    </div>
+  </section>
+
+
     </main>
 
 
