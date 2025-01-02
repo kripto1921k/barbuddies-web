@@ -45,14 +45,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Search bar toggle
-const searchIcon = document.querySelector('.search-icon');
-const searchBar = document.querySelector('#search-bar');
-
-searchIcon.addEventListener('click', () => {
-    searchBar.classList.toggle('show');
-});
-
 // Section para Recetas
 document.addEventListener('DOMContentLoaded', () => {
     const filterToggle = document.getElementById('filter-toggle');
