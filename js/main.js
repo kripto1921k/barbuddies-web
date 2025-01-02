@@ -45,14 +45,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Search bar toggle
-const searchIcon = document.querySelector('.search-icon');
-const searchBar = document.querySelector('#search-bar');
-
-searchIcon.addEventListener('click', () => {
-    searchBar.classList.toggle('show');
-});
-
 // Seccion de las Recetas
 document.addEventListener('DOMContentLoaded', function() {
   const recipes = [
@@ -127,3 +119,4 @@ document.querySelectorAll('.course-button').forEach(button => {
         });
     });
 });
+
