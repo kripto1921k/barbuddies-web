@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbuddies - Cursos</title>
+    <title>Cursos</title>
     <link rel="stylesheet" href="../css/cursos.css">
     <!-- Fuentes -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -26,13 +26,6 @@
                 <li><a href="../html/recetas.html">Recetas</a></li>
                 <li><a href="../html/cursos.html">Cursos</a></li>
                 <li><a href="../html/productos.html">Productos</a></li>
-                <li>
-                    <i class="fas fa-search search-icon nav-link"></i>
-                    <div id="search-bar" class="hidden">
-                      <input type="search" id="search-input" placeholder="Buscar...">
-                      <button id="search-button">Buscar</button>
-                    </div>
-                  </li>
             </ul>
         </nav>
     </header>
@@ -45,6 +38,201 @@
         <p>Explora nuestros cursos y perfecciona tus habilidades. Desde lo básico hasta técnicas avanzadas.</p>
     </div>
 </section>
+
+<!-- Section de los cursos -->
+<section class="courses-section">
+    <header class="section-header">
+      <h1>Encuentra tu Curso Ideal</h1>
+      <input type="text" id="search-input" placeholder="Busca por nombre o tema..." />
+    </header>
+    
+    <div class="filters-container">
+      <button class="filter-toggle" id="filter-toggle">Filtros &#9776;</button>
+      <div class="filters" id="filters">
+        <div class="filter-group">
+          <label for="categoria">Categoría:</label>
+          <select name="categoria" id="categoria">
+            <option value="">Todas</option>
+            <option value="programacion">Programación</option>
+            <option value="diseno">Diseño</option>
+            <option value="marketing">Marketing</option>
+            <option value="negocios">Negocios</option>
+            <option value="idiomas">Idiomas</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="nivel">Nivel:</label>
+          <select name="nivel" id="nivel">
+            <option value="">Todos</option>
+            <option value="principiante">Principiante</option>
+            <option value="intermedio">Intermedio</option>
+            <option value="avanzado">Avanzado</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="duracion">Duración:</label>
+          <select name="duracion" id="duracion">
+            <option value="">Todas</option>
+            <option value="corto">1-4 semanas</option>
+            <option value="medio">1-2 meses</option>
+            <option value="largo">+3 meses</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="precio">Precio:</label>
+          <select name="precio" id="precio">
+            <option value="">Todos</option>
+            <option value="gratis">Gratis</option>
+            <option value="basico">$10-$50</option>
+            <option value="premium">$51-$100</option>
+            <option value="profesional">+$100</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="modalidad">Modalidad:</label>
+          <select name="modalidad" id="modalidad">
+            <option value="">Todas</option>
+            <option value="online">Online</option>
+            <option value="presencial">Presencial</option>
+            <option value="hibrido">Híbrido</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    
+    <div class="courses" id="courses">
+      <!-- tarjeta de curso -->
+       <!-- Curso 01 -->
+      <div class="course-card" 
+           data-categoria="programacion" 
+           data-nivel="principiante" 
+           data-duracion="corto" 
+           data-precio="basico" 
+           data-modalidad="online">
+        <div class="course-image">
+          <img src="../assets/images/course1.jpg" alt="Curso de JavaScript" />
+          <span class="course-badge">Más vendido</span>
+        </div>
+        <div class="course-content">
+          <h3>JavaScript desde Cero</h3>
+          <div class="course-meta">
+            <p class="instructor">Por: Juan Pérez</p>
+            <div class="rating">
+              <span class="stars">★★★★☆</span>
+              <span class="reviews">(245)</span>
+            </div>
+          </div>
+          <div class="course-details">
+            <span><i class="icon-clock"></i> 4 semanas</span>
+            <span><i class="icon-level"></i> Principiante</span>
+            <span><i class="icon-users"></i> 1,234 estudiantes</span>
+          </div>
+          <div class="course-footer">
+            <span class="price">$49.99</span>
+            <button class="enroll-button">Inscribirse</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Curso 02 -->
+      <div class="course-card" 
+           data-categoria="programacion" 
+           data-nivel="principiante" 
+           data-duracion="corto" 
+           data-precio="basico" 
+           data-modalidad="online">
+        <div class="course-image">
+          <img src="../assets/images/course1.jpg" alt="Curso de JavaScript" />
+          <span class="course-badge">Más vendido</span>
+        </div>
+        <div class="course-content">
+          <h3>JavaScript desde Cero</h3>
+          <div class="course-meta">
+            <p class="instructor">Por: Juan Pérez</p>
+            <div class="rating">
+              <span class="stars">★★★★☆</span>
+              <span class="reviews">(245)</span>
+            </div>
+          </div>
+          <div class="course-details">
+            <span><i class="icon-clock"></i> 4 semanas</span>
+            <span><i class="icon-level"></i> Principiante</span>
+            <span><i class="icon-users"></i> 1,234 estudiantes</span>
+          </div>
+          <div class="course-footer">
+            <span class="price">$49.99</span>
+            <button class="enroll-button">Inscribirse</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Curso 03 -->
+      <div class="course-card" 
+           data-categoria="programacion" 
+           data-nivel="principiante" 
+           data-duracion="corto" 
+           data-precio="basico" 
+           data-modalidad="online">
+        <div class="course-image">
+          <img src="../assets/images/course1.jpg" alt="Curso de JavaScript" />
+          <span class="course-badge">Más vendido</span>
+        </div>
+        <div class="course-content">
+          <h3>JavaScript desde Cero</h3>
+          <div class="course-meta">
+            <p class="instructor">Por: Juan Pérez</p>
+            <div class="rating">
+              <span class="stars">★★★★☆</span>
+              <span class="reviews">(245)</span>
+            </div>
+          </div>
+          <div class="course-details">
+            <span><i class="icon-clock"></i> 4 semanas</span>
+            <span><i class="icon-level"></i> Principiante</span>
+            <span><i class="icon-users"></i> 1,234 estudiantes</span>
+          </div>
+          <div class="course-footer">
+            <span class="price">$49.99</span>
+            <button class="enroll-button">Inscribirse</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Curso 04 -->
+      <div class="course-card" 
+           data-categoria="programacion" 
+           data-nivel="principiante" 
+           data-duracion="corto" 
+           data-precio="basico" 
+           data-modalidad="online">
+        <div class="course-image">
+          <img src="../assets/images/course1.jpg" alt="Curso de JavaScript" />
+          <span class="course-badge">Más vendido</span>
+        </div>
+        <div class="course-content">
+          <h3>JavaScript desde Cero</h3>
+          <div class="course-meta">
+            <p class="instructor">Por: Juan Pérez</p>
+            <div class="rating">
+              <span class="stars">★★★★☆</span>
+              <span class="reviews">(245)</span>
+            </div>
+          </div>
+          <div class="course-details">
+            <span><i class="icon-clock"></i> 4 semanas</span>
+            <span><i class="icon-level"></i> Principiante</span>
+            <span><i class="icon-users"></i> 1,234 estudiantes</span>
+          </div>
+          <div class="course-footer">
+            <span class="price">$49.99</span>
+            <button class="enroll-button">Inscribirse</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Añadir más tarjetas de cursos aquí -->
+    </div>
+  </section>
 
     </main>
 
@@ -104,6 +292,6 @@
         </div>
     </footer>
 
-    <script src="../js/recetas.js"></script>
+    <script src="../js/cursos.js"></script>
 </body>
 </html>
