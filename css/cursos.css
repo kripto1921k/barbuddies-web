@@ -103,46 +103,6 @@
     background-color: #231F20;
   }
   
-  /* Oculta la barra de búsqueda por defecto */
-  #search-bar {
-    display: none;
-  }
-  
-  /* Muestra la barra de búsqueda cuando se hace clic en la lupa */
-  #search-bar.show {
-    display: block;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #FFFFFF;
-    padding: 10px;
-    border: 1px solid #CCCCCC;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  
-  #search-bar.show input[type="search"] {
-    padding: 10px;
-    border: none;
-    border-radius: 20px;
-    width: 200px;
-    height: 40px;
-    font-size: 16px;
-  }
-  
-  #search-bar.show button[type="button"] {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 10px;
-    border: none;
-    border-radius: 20px;
-    background-color: #C7A17A;
-    color: #FFFFFF;
-    cursor: pointer;
-  }
-  
   .nav-link {
     color: #FFFFFF; /* Color blanco para el icono de la lupa cuando la barra de navegación es transparente */
   }
@@ -160,17 +120,11 @@
         color: var(--secondary-color); /* Cambia a negro para ser visible sobre fondo blanco */
     }
   
-    /* Asegúrate de que el ícono de la lupa tenga el color correcto por defecto */
-    .search-icon {
-        color: var(--white);
-        transition: color 0.3s ease;
-    }
-  
-    .header.scrolled .search-icon {
+    .header.scrolled {
         color: var(--secondary-color);
     }
   
-    .nav-menu.active .search-icon {
+    .nav-menu.active {
         color: var(--secondary-color); /* Color negro cuando el menú está abierto */
     }
   }
@@ -406,4 +360,220 @@
 .courses-hero-content p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+}
+
+/* Section de los cursos */
+.courses-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-header h1 {
+  font-family: 'Playfair Display', serif;
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  margin-top: 1rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Filtros */
+.filters-container {
+  margin-bottom: 2rem;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter-toggle {
+  display: none;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  align-self: center;
+  width: auto;
+  margin: 1rem auto;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  background-color: var(--light-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 150px;
+}
+
+.filter-group label {
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+.filter-group select {
+  padding: 8px;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--white);
+}
+
+/* Tarjetas de cursos */
+.courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.course-card {
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.course-image {
+  position: relative;
+  height: 200px;
+}
+
+.course-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.course-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.course-content {
+  padding: 1.5rem;
+}
+
+.course-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.course-details {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.course-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--light-bg);
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.enroll-button {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .courses {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .courses {
+    grid-template-columns: 1fr;
+  }
+  
+  .filters-container {
+    position: relative;
+  }
+
+  .filter-toggle {
+    display: inline-block;
+    background-color: var(--primary-color);
+    text-align: center;
+    min-width: 120px;
+    max-width: 200px;
+  }
+
+  .filters {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .filters.active {
+    display: flex;
+  }
+
+  .filter-group {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .filter-group select {
+    width: 100%;
+  }
 }
